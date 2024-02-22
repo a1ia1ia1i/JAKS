@@ -6,11 +6,11 @@ use PhpAmqpLib\Message\AMQPMessage;
 
 // Function to publish messages to RabbitMQ
 function publishToQueue($userData) {
-    $host = 'localhost'; // Change this to your RabbitMQ server address
+    $host = '10.244.168.117'; // Change this to your RabbitMQ server address
     $port = 5672; // Default port for RabbitMQ
-    $user = 'guest'; // Change this to your RabbitMQ user
-    $pass = 'guest'; // Change this to your RabbitMQ password
-    $queue = 'registration_queue';
+    $user = 'test'; // Change this to your RabbitMQ user
+    $pass = 'test'; // Change this to your RabbitMQ password
+    $queue = 'testQueue';
 
     $connection = new AMQPStreamConnection($host, $port, $user, $pass);
     $channel = $connection->channel();
